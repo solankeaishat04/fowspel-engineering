@@ -27,8 +27,8 @@ export async function POST(req: Request) {
     });
 
     await transporter.sendMail({
-      from: `"${name}" <${process.env.EMAIL_USER}>`, // must be your SMTP email
-      replyTo: email,                               // visitor’s email
+      from: `"${name}" <${process.env.EMAIL_USER}>`, 
+      replyTo: email,                              
       to: process.env.EMAIL_TO,
       subject: `New Contact Message from ${name}`,
       html: `

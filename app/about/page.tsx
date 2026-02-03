@@ -1,5 +1,5 @@
 
-export default function About() {
+export default function AboutUs() {
   return (
     <div className="about">
       <h1>About Us</h1>

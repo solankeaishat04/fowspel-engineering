@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 const NavData = [
-  { name: "About Us", link: "/teams" },
+  { name: "About Us", link: "/about" },
   { name: "Services", link: "/services" },
   { name: "Contact", link: "/contact" },
 ];

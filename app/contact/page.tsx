@@ -76,7 +76,7 @@ export default function ContactPage() {
                   error={!!errors.name}
                   helperText={errors.name?.message}
                   InputLabelProps={{ className: "text-gray-300" }}
-                  InputProps={{ className: "text-white bg-gray-900 rounded-lg" }}
+                  InputProps={{ className: "text-white bg-gray-200 rounded-lg" }}
                 />
 
                 <TextField
@@ -85,7 +85,7 @@ export default function ContactPage() {
                   error={!!errors.email}
                   helperText={errors.email?.message}
                   InputLabelProps={{ className: "text-gray-300" }}
-                  InputProps={{ className: "text-white bg-gray-900 rounded-lg" }}
+                  InputProps={{ className: "text-white bg-gray-200 rounded-lg" }}
                 />
 
                 <TextField
@@ -96,13 +96,13 @@ export default function ContactPage() {
                   error={!!errors.message}
                   helperText={errors.message?.message}
                   InputLabelProps={{ className: "text-gray-300" }}
-                  InputProps={{ className: "text-white bg-gray-900 rounded-lg" }}
+                  InputProps={{ className: "text-white bg-gray-200 rounded-lg" }}
                 />
 
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="bg-linear-to-r from-orange-500 to-orange-600 text-black font-bold py-3 rounded-lg"
+                  className="bg-linear-to-r from-orange-200 to-orange-300 text-black font-bold py-3 rounded-lg"
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
@@ -134,6 +134,7 @@ export default function ContactPage() {
                 <p><span className="text-orange-500 font-bold">Email:</span> info@gymengineering.com</p>
                 <p><span className="text-orange-500 font-bold">Address:</span> Lagos, Nigeria</p>
               </Box>
+              <Box className="mt-6"> <Typography className="font-bold text-orange-500 mb-4 text-lg"> Find Us Here: </Typography> <iframe className="w-full h-64 md:h-80 rounded-xl shadow-lg border-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.123456789!2d3.123456!3d6.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9b123456789%3A0x123456789abcdef!2sLagos%2C%20Nigeria!5e0!3m2!1sen!2sus!4v1678901234567!5m2!1sen!2sus" loading="lazy" title="Location Map" /> </Box>
             </MotionBox>
           </Box>
         </Box>

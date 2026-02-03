@@ -30,181 +30,113 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <Box sx={{ bgcolor: "#f9fafb", minHeight: "100vh" }}>
-      {/* Hero Section */}
-      <Box sx={{ 
-        background: "linear-gradient(to right, #1e40af, #7c3aed)",
-        color: "white",
-        py: { xs: 8, md: 12 },
-        px: { xs: 2, md: 4 },
-        textAlign: "center"
-      }}>
-        <Typography 
-          variant="h2" 
-          sx={{ 
-            fontWeight: 700, 
-            fontSize: { xs: "2.25rem", md: "3.75rem" }, 
-            mb: 2 
-          }}
+    <Box className="bg-black text-white min-h-screen">
+      {/* HERO – Similar to Home */}
+      <Box className="py-20 px-4 md:px-8 text-center max-w-5xl mx-auto">
+        <MotionBox
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
         >
-          Advanced Gym Engineering Services
-        </Typography>
-        <Typography 
-          variant="subtitle1" 
-          sx={{ 
-            fontSize: { xs: "1rem", md: "1.25rem" }, 
-            maxWidth: "800px", 
-            mx: "auto", 
-            mb: 4 
-          }}
-        >
-          We design, integrate, and maintain cutting-edge gyms that maximize efficiency, performance, and client satisfaction.
-        </Typography>
-        <Button
-          variant="contained"
-          size="large"
-          sx={{
-            bgcolor: "#fbbf24",
-            color: "#000",
-            fontWeight: 700,
-            "&:hover": {
-              bgcolor: "#f59e0b",
-            },
-          }}
-        >
-          Get a Consultation
-        </Button>
+          <Typography className="text-4xl md:text-6xl font-bold text-orange-500 mb-6">
+            Our Services
+          </Typography>
+
+          <Typography className="text-gray-300 text-lg md:text-xl mb-8">
+            We design, build, and support modern gym environments that combine
+            performance, technology, and efficiency.
+          </Typography>
+
+          <Button className="bg-orange-500 hover:bg-orange-600 text-black font-bold px-8 py-3 rounded-lg">
+            Get a Consultation
+          </Button>
+        </MotionBox>
       </Box>
 
-      {/* Services Grid - Using Flexbox */}
-      <Box sx={{ py: { xs: 8, md: 10 }, px: { xs: 2, md: 4 }, maxWidth: "1200px", mx: "auto" }}>
-        <Typography variant="h3" sx={{ textAlign: "center", fontWeight: 600, mb: 8 }}>
+      {/* SERVICES GRID */}
+      <Box className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
+        <Typography className="text-3xl md:text-4xl font-bold text-center text-orange-500 mb-12">
           What We Offer
         </Typography>
-        
-        {/* Flexbox container */}
-        <Box sx={{ 
-          display: 'flex', 
-          flexWrap: 'wrap', 
-          gap: { xs: 3, md: 4 },
-          justifyContent: 'center'
-        }}>
+
+        <Box className="flex flex-wrap gap-6 justify-center">
           {services.map((service, index) => (
-            <Box 
+            <MotionBox
               key={index}
-              sx={{ 
-                width: { 
-                  xs: '100%', 
-                  sm: 'calc(50% - 12px)', 
-                  lg: 'calc(25% - 12px)' 
-                },
-                flexShrink: 0
-              }}
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
+              className="w-full sm:w-[48%] lg:w-[23%]"
             >
-              <MotionBox
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-              >
-                <Card sx={{ 
-                  boxShadow: 3,
-                  borderRadius: 2,
-                  transition: "box-shadow 0.3s ease, transform 0.3s ease",
-                  "&:hover": { 
-                    boxShadow: 6,
-                    transform: "translateY(-4px)"
-                  },
-                  height: "100%"
-                }}>
-                  <CardContent sx={{ textAlign: "center", p: 4 }}>
-                    <Typography variant="h1" sx={{ fontSize: "3rem", mb: 2 }}>
-                      {service.icon}
-                    </Typography>
-                    <Typography variant="h5" sx={{ fontWeight: 700, mb: 1 }}>
-                      {service.title}
-                    </Typography>
-                    <Typography sx={{ color: "text.secondary" }}>
-                      {service.description}
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </MotionBox>
-            </Box>
+              <Card className="bg-gray-900 border border-gray-800 rounded-2xl h-full hover:-translate-y-2 transition-transform duration-300">
+                <CardContent className="text-center p-6">
+                  <Typography className="text-4xl mb-4">
+                    {service.icon}
+                  </Typography>
+
+                  <Typography className="text-xl font-bold text-orange-500 mb-2">
+                    {service.title}
+                  </Typography>
+
+                  <Typography className="text-gray-300 text-sm">
+                    {service.description}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </MotionBox>
           ))}
         </Box>
       </Box>
 
-      {/* Stats Section - Using Flexbox */}
-      <Box sx={{ 
-        bgcolor: "#1e3a8a", 
-        color: "white", 
-        py: { xs: 8, md: 10 }, 
-        px: { xs: 2, md: 4 } 
-      }}>
-        <Box sx={{ 
-          display: 'flex', 
-          flexWrap: 'wrap', 
-          gap: { xs: 4, md: 8 }, 
-          textAlign: "center", 
-          maxWidth: "1000px", 
-          mx: "auto",
-          justifyContent: 'center'
-        }}>
-          <Box sx={{ width: { xs: 'calc(50% - 16px)', md: 'calc(25% - 24px)' } }}>
-            <Typography variant="h3" sx={{ fontWeight: 700, mb: 1, fontSize: { xs: "2rem", md: "3rem" } }}>
-              150+
-            </Typography>
-            <Typography>Gyms Designed</Typography>
-          </Box>
-          <Box sx={{ width: { xs: 'calc(50% - 16px)', md: 'calc(25% - 24px)' } }}>
-            <Typography variant="h3" sx={{ fontWeight: 700, mb: 1, fontSize: { xs: "2rem", md: "3rem" } }}>
-              300+
-            </Typography>
-            <Typography>Equipment Installed</Typography>
-          </Box>
-          <Box sx={{ width: { xs: 'calc(50% - 16px)', md: 'calc(25% - 24px)' } }}>
-            <Typography variant="h3" sx={{ fontWeight: 700, mb: 1, fontSize: { xs: "2rem", md: "3rem" } }}>
-              24/7
-            </Typography>
-            <Typography>Support Availability</Typography>
-          </Box>
-          <Box sx={{ width: { xs: 'calc(50% - 16px)', md: 'calc(25% - 24px)' } }}>
-            <Typography variant="h3" sx={{ fontWeight: 700, mb: 1, fontSize: { xs: "2rem", md: "3rem" } }}>
-              99%
-            </Typography>
-            <Typography>Client Satisfaction</Typography>
-          </Box>
+      {/* STATS SECTION */}
+      <Box className="bg-gray-900 py-16 px-4 md:px-8">
+        <Box className="max-w-5xl mx-auto flex flex-wrap justify-center gap-8 text-center">
+          {[
+            { value: "150+", label: "Gyms Designed" },
+            { value: "300+", label: "Equipment Installed" },
+            { value: "24/7", label: "Support" },
+            { value: "99%", label: "Client Satisfaction" },
+          ].map((stat, i) => (
+            <MotionBox
+              key={i}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.15 }}
+              className="w-[45%] md:w-[22%]"
+            >
+              <Typography className="text-3xl md:text-4xl font-bold text-orange-500">
+                {stat.value}
+              </Typography>
+              <Typography className="text-gray-300 mt-2">
+                {stat.label}
+              </Typography>
+            </MotionBox>
+          ))}
         </Box>
       </Box>
 
-      {/* CTA Section */}
-      <Box sx={{ 
-        background: "linear-gradient(to right, #1e40af, #7c3aed)",
-        color: "white",
-        py: { xs: 8, md: 12 },
-        px: { xs: 2, md: 4 },
-        textAlign: "center" 
-      }}>
-        <Typography variant="h4" sx={{ fontWeight: 700, mb: 3, fontSize: { xs: "1.75rem", md: "2.25rem" } }}>
-          Ready to Upgrade Your Gym?
-        </Typography>
-        <Typography sx={{ mb: 4, maxWidth: "800px", mx: "auto" }}>
-          Connect with us today for a full consultation and see how we can transform your fitness business.
-        </Typography>
-        <Button
-          variant="contained"
-          size="large"
-          sx={{
-            bgcolor: "#fbbf24",
-            color: "#000",
-            fontWeight: 700,
-            "&:hover": {
-              bgcolor: "#f59e0b",
-            },
-          }}
+      {/* CTA */}
+      <Box className="py-20 px-4 md:px-8 text-center">
+        <MotionBox
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >
-          Contact Us
-        </Button>
+          <Typography className="text-3xl md:text-4xl font-bold text-orange-500 mb-4">
+            Ready to Upgrade Your Gym?
+          </Typography>
+
+          <Typography className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Let’s build a gym that stands out and performs at the highest level.
+          </Typography>
+
+          <Button className="bg-orange-500 hover:bg-orange-600 text-black font-bold px-10 py-3 rounded-lg">
+            Contact Us
+          </Button>
+        </MotionBox>
       </Box>
     </Box>
   );
