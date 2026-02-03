@@ -48,7 +48,7 @@ const Stats = () => {
   return (
     <section className="bg-linear-to-r  from-gray-900 to-orange-900 text-white py-20 px-4 max-w-7xl mx-auto">
       <div className="max-w-7xl mx-auto">
-        {/* HEADER */}
+        
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Engineering Excellence{" "}
@@ -65,7 +65,7 @@ const Stats = () => {
           </button>
         </div>
 
-        {/* STATS GRID */}
+     
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <div

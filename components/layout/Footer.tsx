@@ -40,7 +40,7 @@ export default function Footer() {
     <footer className="bg-gray-800 border-t py-10 px-6 md:px-20">
       <div className="max-w-7xl mx-auto">
 
-        {/* TOP GRID */}
+       
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-white text-sm">
           <div>
             <Image
@@ -114,7 +114,7 @@ export default function Footer() {
          
         </div>
 
-        {/* BOTTOM */}
+        
         <div className="mt-10 flex flex-wrap justify-between items-center gap-6 text-gray-300 text-sm">
           <p>&copy; {year} Fowspel Engineering Ltd. All Rights Reserved.</p>
           <Link href="#" className="underline hover:text-orange-500">

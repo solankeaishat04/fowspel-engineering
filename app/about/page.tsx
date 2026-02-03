@@ -24,7 +24,7 @@ export default function AboutPage() {
 
   return (
     <Box className="bg-black text-white min-h-screen">
-      {/* HERO */}
+     
       <Box className="py-20 px-4 md:px-8 max-w-6xl mx-auto">
         <MotionBox
           initial={{ opacity: 0, y: 40 }}
@@ -41,7 +41,7 @@ export default function AboutPage() {
         </MotionBox>
       </Box>
 
-      {/* CEO SECTION */}
+     
       <Box className="py-16 px-4 md:px-8 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <MotionBox
           initial={{ opacity: 0, x: -50 }}
@@ -74,8 +74,7 @@ export default function AboutPage() {
         </MotionBox>
       </Box>
 
-      {/* TEAM SECTION */}
-      <Box className="py-16 px-4 md:px-8 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+         <Box className="py-16 px-4 md:px-8 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <MotionBox
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -105,13 +104,13 @@ export default function AboutPage() {
         </MotionBox>
       </Box>
 
-     {/* PROJECTS / MOVING GALLERY */}
+     
 <Box className="py-20 px-4 md:px-8 max-w-6xl mx-auto overflow-hidden">
   <Typography className="text-3xl md:text-4xl font-bold text-orange-500 text-center mb-12">
     Our Projects
   </Typography>
 
-  {/* ROW 1 – MOVE LEFT */}
+  
   <motion.div
     animate={{ x: ["0%", "-50%"] }}
     transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
@@ -128,7 +127,7 @@ export default function AboutPage() {
     ))}
   </motion.div>
 
-  {/* ROW 2 – MOVE RIGHT */}
+  
   <motion.div
     animate={{ x: ["-50%", "0%"] }}
     transition={{ repeat: Infinity, duration: 22, ease: "linear" }}

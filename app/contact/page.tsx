@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
-/* ✅ IMPORT YOUR EXISTING SCHEMA */
+
 import { useContactSchema, ContactInput } from "@/schemas/useContact";
 
 const MotionBox = motion(Box);
