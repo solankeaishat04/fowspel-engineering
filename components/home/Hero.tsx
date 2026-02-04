@@ -8,8 +8,8 @@ import { motion, AnimatePresence } from "framer-motion";
 const images = [
   "/fowspel.avif",
   "/fowspel2.jpg",
-  "/fowspel gym1.jpg",
-  "/fowspel gym4.webp",
+  "/fowspelgym1.jpg",
+  "/fowspelgym4.webp",
 ];
 
 export default function Hero() {

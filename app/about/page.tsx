@@ -8,12 +8,12 @@ import { motion } from "framer-motion";
 const MotionBox = motion(Box);
 
 const projects = [
-  "/fowspel work img1.jpeg",
-  "/fowspel work img2.jpeg",
-  "/fowspel work img3.jpeg",
-  "/fowspel work img4.jpeg",
-  "/fowspel work img5.jpeg",
-  "/fowspel work img1.jpeg",
+  "/fowspelworkimg1.jpeg",
+  "/fowspelworkimg2.jpeg",
+  "/fowspelworkimg3.jpeg",
+  "/fowspelworkimg4.jpeg",
+  "/fowspelworkimg5.jpeg",
+  "/fowspelworkimg1.jpeg",
  
 ];
 
@@ -76,7 +76,7 @@ export default function AboutPage() {
           transition={{ duration: 0.7 }}
         >
           <img
-            src="/fowspel ceo.jpeg"
+            src="/fowspelceo.jpeg"
             alt="CEO"
             className="rounded-2xl w-full object-cover"
           />
@@ -91,7 +91,7 @@ export default function AboutPage() {
           transition={{ duration: 0.7 }}
         >
           <img
-            src="/fowspel team.jpeg"
+            src="/fowspelteam.jpeg"
             alt="Our Team"
             className="rounded-2xl w-full object-cover"
           />
