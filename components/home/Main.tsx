@@ -76,7 +76,7 @@ const Main = () => {
 
   return (
     <section className="min-h-screen bg-gray-50 max-w-7xl mx-auto">
-      {/* INTRO */}
+      
       <div className="bg-white py-12 px-6 text-center" data-aos="fade-up">
         <h2 className="text-2xl md:text-3xl mb-4 font-bold">
           WHY CHOOSE FOWSPEL ENGINEERING LTD
@@ -87,7 +87,7 @@ const Main = () => {
         </p>
       </div>
 
-      {/* FEATURES */}
+     
       <div className="max-w-6xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {features.map((feature, index) => (
@@ -109,7 +109,7 @@ const Main = () => {
                 {feature.description}
               </p>
 
-              {/* EXPANDABLE */}
+              
               <div
                 className="overflow-hidden transition-all duration-300"
                 style={{

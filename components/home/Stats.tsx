@@ -5,6 +5,7 @@ import { JSX, useEffect, useRef, useState } from "react";
 import CountUp from "react-countup";
 import AOS from "aos"; 
 import "aos/dist/aos.css";
+import Link from "next/link";
 
 interface StatItem {
   label: string;
@@ -48,7 +49,7 @@ const Stats = () => {
   return (
     <section className="bg-linear-to-r  from-gray-900 to-orange-900 text-white py-20 px-4 max-w-7xl mx-auto">
       <div className="max-w-7xl mx-auto">
-        {/* HEADER */}
+        
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Engineering Excellence{" "}
@@ -60,12 +61,16 @@ const Stats = () => {
             solutions with precision, safety, and long-term value.
           </p>
 
-          <button className="mt-8 flex items-center justify-center mx-auto gap-2 bg-orange-500 hover:bg-orange-600 px-8 py-3 rounded-full font-semibold transition hover:scale-105">
-            View Our Projects <ArrowRight size={18} />
-          </button>
+         <Link
+  href="/about"
+  className="mt-8 inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 px-8 py-4 rounded-full text-sm font-semibold transition hover:scale-105"
+>
+  View Our Projects <ArrowRight size={16} />
+</Link>
+
         </div>
 
-        {/* STATS GRID */}
+     
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <div
