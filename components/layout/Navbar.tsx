@@ -33,13 +33,13 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <button onClick={() => setOpen(!open)} className="md:hidden">
+        <button onClick={() => setOpen(!open)} className="md:hidden text-orange-400 font-bold text-3xl">
           ☰
         </button>
       </div>
 
       {open && (
-        <div className="md:hidden bg-white px-6 pb-4">
+        <div className="md:hidden bg-white text-orange-500 px-6 pb-4">
           {NavData.map((item) => (
             <Link
               key={item.name}
