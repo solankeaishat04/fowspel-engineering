@@ -130,9 +130,9 @@ export default function ContactPage() {
               </Typography>
 
               <Box className="space-y-5 text-gray-300">
-                <p><span className="text-orange-500 font-bold">Phone:</span> +234 800 123 4567</p>
-                <p><span className="text-orange-500 font-bold">Email:</span> info@gymengineering.com</p>
-                <p><span className="text-orange-500 font-bold">Address:</span> Lagos, Nigeria</p>
+                <p><span className="text-orange-500 font-bold">Phone:</span> +234 803 543 4170</p>
+                <p><span className="text-orange-500 font-bold">Email:</span> fowspelengineering04@gmail.com</p>
+                <p><span className="text-orange-500 font-bold">Address:</span> 29, shidero fadeyi shomolu lagos </p>
               </Box>
               <Box className="mt-6"> <Typography className="font-bold text-orange-500 mb-4 text-lg"> Find Us Here: </Typography> <iframe className="w-full h-64 md:h-80 rounded-xl shadow-lg border-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.123456789!2d3.123456!3d6.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9b123456789%3A0x123456789abcdef!2sLagos%2C%20Nigeria!5e0!3m2!1sen!2sus!4v1678901234567!5m2!1sen!2sus" loading="lazy" title="Location Map" /> </Box>
             </MotionBox>

@@ -1,5 +1,5 @@
 // lib/api.ts
-import { supabase } from "./supabase";
+// import { supabase } from "./supabase";
 import { ContactInput } from "@/schemas/useContact";
 
 export async function submitContact(data: ContactInput) {
