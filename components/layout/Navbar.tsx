@@ -18,7 +18,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between py-4">
         <Link href="/">
           <Image
-            src="/fowspel_logo.ico"
+            src="/fowspel_logo-removebg-preview.png"
             alt="Fowspel Engineering"
             width={120}
             height={40}
