@@ -9,10 +9,10 @@ export const metadata: Metadata = {
   title: "fowspelengineering.com",
   description:
     "A portfolio showcasing the work of a talented model, featuring stunning images and captivating stories.",
-  icons: {
-    icon: "/fowspel_logo.png",
-    shortcut: "/fowspel_logo.png",
-    apple: "/fowspel_logo.png",
+icons: {
+    icon: "/favicon.ico",      
+    shortcut: "/favicon.ico",  
+    apple: "/favicon.ico",     
   },
 };
 

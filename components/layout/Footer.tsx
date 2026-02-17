@@ -44,7 +44,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-white text-sm">
           <div>
             <Image
-              src="/fowspel_logo.png"
+              src="/fowspel_logo-removebg-preview.png"
               alt="Fowspel Engineering Ltd"
               width={120}
               height={60}
